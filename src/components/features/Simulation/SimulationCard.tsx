@@ -42,9 +42,7 @@ export function SimulationCard({ simulation, onDelete }: SimulationCardProps) {
             CUSTO DA META
           </span>
           <span className="text-foreground text-base font-bold sm:text-sm">
-            R$ {simulation.goalAmount.toLocaleString('pt-BR', {
-              minimumFractionDigits: 0,
-            })}
+            R$ {simulation.goalAmount.toLocaleString()}
           </span>
         </div>
 
@@ -76,7 +74,7 @@ export function SimulationCard({ simulation, onDelete }: SimulationCardProps) {
         <button
           type="button"
           onClick={() => onDelete(simulation.id)}
-          className="text-red-500 hover:bg-red-500/10 rounded-xl p-2 transition-colors"
+          className="rounded-xl p-2 text-red-500 transition-colors hover:bg-red-500/10"
           title="Excluir simulação"
         >
           <Trash2 className="h-5 w-5" />
@@ -87,7 +85,7 @@ export function SimulationCard({ simulation, onDelete }: SimulationCardProps) {
         <button
           type="button"
           onClick={() => navigate(`/resultado/${simulation.id}`)}
-          className="text-foreground hover:text-primary flex items-center gap-2 text-xs font-semibold transition-colors sm:border-border sm:bg-muted/50 sm:hover:bg-muted/80 sm:rounded-xl sm:border sm:px-4 sm:py-2"
+          className="text-foreground hover:text-primary sm:border-border sm:bg-muted/50 sm:hover:bg-muted/80 flex items-center gap-2 text-xs font-semibold transition-colors sm:rounded-xl sm:border sm:px-4 sm:py-2"
         >
           <ExternalLink className="h-4 w-4" />
           <span>Ver detalhes</span>
