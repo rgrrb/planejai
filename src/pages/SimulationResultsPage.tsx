@@ -54,7 +54,8 @@ export function SimulationResultsPage() {
         />
       </div>
       <div className="grid gap-6 lg:grid-cols-3">
-        <AIInsightsCard simulationId={data.id} />
+        {/* O Card do Insight recebe o id e os dados da simulação para acoplar o chat na mesma div */}
+        <AIInsightsCard simulationId={data.id} simulation={data} />
         <div className="order-1 flex flex-col gap-6 lg:order-2">
           <Card
             icon={Wallet}
